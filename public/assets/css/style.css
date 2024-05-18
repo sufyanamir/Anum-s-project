@@ -1,0 +1,280 @@
+.topbar-menuEntring {
+    transition: transform 0.1s ease-out, opacity 0.1s ease-out, scale 0.1s ease-out;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.topbar-manuLeaving {
+    transition: transform 0.075s ease-in, opacity 0.075s ease-in, scale 0.075s ease-in;
+    transform: scale(0.95);
+    opacity: 0;
+    display: none;
+}
+
+/* Apply margin to the "Show entries" section */
+div.dataTables_length {
+    margin-left: 15px;
+}
+
+.dataTables_length select {
+    border-radius: 10px !important;
+    outline: none !important;
+}
+
+/* Apply margin to the search section */
+div.dataTables_filter {
+    margin-right: 15px;
+    margin-bottom: 10px;
+    /* margin-left: 20px; */
+}
+
+.dataTables_filter input {
+    border-radius: 10px !important;
+    outline: none !important;
+}
+
+div.dataTables_info {
+    text-align: right;
+    margin-left: 15px;
+    color: #ACADAE !important;
+
+}
+
+div.dataTables_paginate {
+    text-align: right;
+    margin-right: 15px;
+}
+
+a.paginate_button.current {
+    background: #ECECEC !important;
+    border: none !important;
+    border-radius: 20px !important;
+}
+
+/* Hide the default checkbox */
+.rate {
+    height: 46px;
+    padding: 0 37px;
+    /* display: flex !important; */
+    justify-content: center !important;
+    width: 100%;
+}
+
+.rate:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+}
+
+.rate:not(:checked)>label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc;
+}
+
+.rate:not(:checked)>label:before {
+    content: '★ ';
+}
+
+.rate>input:checked~label {
+    color: #930027;
+}
+
+.rate:not(:checked)>label:hover,
+.rate:not(:checked)>label:hover~label {
+    color: #930027;
+}
+
+.rate>input:checked+label:hover,
+.rate>input:checked+label:hover~label,
+.rate>input:checked~label:hover,
+.rate>input:checked~label:hover~label,
+.rate>label:hover~input:checked~label {
+    color: #930027;
+}
+
+.btn-bg {
+    background-image: linear-gradient(#00A3FF, #023D5F);
+    border: none;
+    border-radius: 6px;
+}
+
+.btn-bg:active {
+    background-image: linear-gradient(#023D5F, #00A3FF) !important;
+}
+
+img {
+    position: relative;
+}
+
+.edit-button {
+    position: absolute;
+    bottom: 50px;
+    left: 560px;
+    right: 450px;
+}
+
+.profile-dropzone {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.dropzonee {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* border-radius: 50%; */
+    overflow: hidden;
+    display: inline-block;
+    /* background-color: #F5F5F5; */
+}
+
+
+.file-input-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.file-input-container:hover {
+    opacity: 1;
+}
+
+.file-inputt-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.5); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* opacity: 0; */
+    cursor: pointer;
+    /* transition: opacity 0.3s ease; */
+}
+
+.file-inputt-container:hover {
+    opacity: 1;
+}
+
+.upload-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.upload-icon svg {
+    width: 30px;
+    height: 30px;
+    fill: #233A85;
+}
+
+.file-input {
+    display: none;
+}
+
+input[type=checkbox]+label {
+    display: block;
+    margin: 0.2em;
+    cursor: pointer;
+    padding: em;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox]+label:before {
+    content: "\2713";
+    border: 1.5px solid #1C274C;
+    border-radius: 25%;
+    display: inline-block;
+    width: 1.3em;
+    height: 1.3em;
+    padding-left: 0.2em;
+    padding-bottom: 0.2em;
+    margin-right: 0.2em;
+    vertical-align: bottom;
+    color: transparent;
+    transition: .2s;
+}
+
+input[type=checkbox]+label:active:before {
+    transform: scale(0);
+}
+
+input[type=checkbox]:checked+label:before {
+    background-color: #71E25E;
+    border-color: rgb(0, 0, 0);
+    color: #000000;
+}
+
+
+.dataTables_length label {
+    display: flex !important;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Add your CSS styling here */
+#userDropdown {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 1;
+}
+
+#userDropdown button {
+    width: 100%;
+    padding: 8px;
+    text-align: left;
+    border: none;
+    background-color: white;
+}
+
+.shadow-med {
+    box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.07);
+}
+.desktop-closed-message-avatar{
+    padding: 10px;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+textarea {
+    color: black !important;
+}
+.dropzone {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    border-radius: 0%;
+    overflow: hidden;
+    display: inline-block;
+}
